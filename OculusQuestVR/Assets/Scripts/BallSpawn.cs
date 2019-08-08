@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallSpawn : MonoBehaviour
+namespace QuestVR_MP
 {
-    public GameObject ball;
-
-    public void CreateBall()
+    public class BallSpawn : MonoBehaviour
     {
-        Instantiate(ball, new Vector3(0f, 1f, 0f), Quaternion.identity);
+        public GameObject ball;
+
+        public void CreateBall()
+        {
+            Instantiate(ball, new Vector3(0f, 1f, 0f), Quaternion.identity);
+        }
     }
 }

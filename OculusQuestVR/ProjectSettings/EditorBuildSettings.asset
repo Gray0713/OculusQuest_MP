@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/QuestVRScene.unity
-    guid: 0d7d792ee88eace4f8dc90e812ae683d
+  - enabled: 1
+    path: Assets/Scenes/QuestVR LauncherMP.unity
+    guid: 45939272e7170154e90c63f523904844
   - enabled: 1
     path: Assets/Scenes/QuestVRUIScene.unity
     guid: b764eace319dc77479a74fe5d78e9540
