@@ -28,7 +28,7 @@ namespace QuestVR_MP
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
             Debug.LogFormat("OnPlayerLeftRoom() {0}", otherPlayer.NickName);        // seen when another player disconnects
-            noOfPlayersInRoom.text = PhotonNetwork.PlayerList.Length.ToString();    // Update UI
+            noOfPlayersInRoom.text = PhotonNetwork.CountOfPlayersInRooms.ToString();    // Update UI
 
             if (PhotonNetwork.IsMasterClient)
             {
@@ -41,7 +41,7 @@ namespace QuestVR_MP
         public override void OnPlayerEnteredRoom(Player newPlayer)
         {
             Debug.LogFormat("OnPlayerEnteredRoom() {0}", newPlayer.NickName);       // seen when another player connects
-            noOfPlayersInRoom.text = PhotonNetwork.PlayerList.Length.ToString();    // Update UI
+            noOfPlayersInRoom.text = PhotonNetwork.CountOfPlayersInRooms.ToString();    // Update UI
 
             if (PhotonNetwork.IsMasterClient)
             {
@@ -68,6 +68,7 @@ namespace QuestVR_MP
                     // Spawn a character for the local player
                     // This gets synced by using PhotonNetwork.Instantiate
                     PhotonNetwork.Instantiate(playerPrefab.name, new Vector3(0f, 0f, 0f), Quaternion.identity, 0);
+                    noOfPlayersInRoom.text = PhotonNetwork.CountOfPlayersInRooms.ToString();    // Update UI
                 }
                 else
                 {

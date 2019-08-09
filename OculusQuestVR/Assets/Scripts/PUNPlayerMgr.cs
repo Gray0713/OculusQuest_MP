@@ -87,6 +87,9 @@ namespace QuestVR_MP
             {
                 Debug.Log("I'm instantiated...!!!");
             }
+
+            
+
         }
 
         private void Update()
